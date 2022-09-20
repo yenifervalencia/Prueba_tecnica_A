@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<div class="container">
+    <h2>Listado de Usuarios</h2>
+
+    <table class="table table-hover ">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Ciudad</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuarios of usuarios" (click)="verUsuario(usuarios.id)">
+        <th scope="row">{{usuarios.id}}</th>
+        <td>{{usuarios.name}}</td>
+        <td>{{usuarios.email}}</td>
+        <td>{{usuarios.phone}}</td>
+        <td>{{usuarios.address.city}}</td>
+
+      </tr>
+      
+     
+    </tbody>
+    </table>
+    <br>
+</div>
+
+<app-footer></app-footer>

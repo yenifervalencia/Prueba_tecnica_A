@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<div class="container">
+  <form >
+
+    <div class="modal-body">
+      <div class="card">
+          <div class="card-body">
+                              <h2>Datos del Usuario</h2>        
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-4" >
+                          <div class="form-group">
+                            <label for="">Nombre: </label>
+                            <br>
+                            <input type="text" [value]="usuario" disabled>
+                          </div>
+                          
+                      </div>
+
+                      <div class="col-xs-12 col-sm-4" >
+                        <div class="form-group">
+                          <label for="">Numero de Posts: </label>
+                          <br>
+                          <input type="text" [value]="Nposts" disabled>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4" >
+                      <div class="form-group">
+                        <label for="">Albums: </label>
+                        <select class="form-control form-control-sm"
+                        name="albunes"
+                        required>
+                        <option value="">Lista de Album</option>
+                        <option *ngFor="let album of album" [value]="album.id">{{album.title}}</option>
+            </select>
+                      </div>
+                      
+                  </div>
+                  </div>
+          </div>
+      </div>
+    </div>
+    
+  </form>
+</div>
+
+<app-footer></app-footer>
