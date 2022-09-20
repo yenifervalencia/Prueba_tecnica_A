@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import {album, posts}from '../../modelos/users.interface';
 import { ApiService } from 'src/app/servicios/api.service';
-import { FormGroup,FormControl } from '@angular/forms';
 import { LiteralExpr } from '@angular/compiler';
 
 
@@ -21,11 +20,7 @@ export class ViewUserComponent implements OnInit {
   Nposts:number=0;
   album:album[]=[];
 
-VerForm=new FormGroup({
-  name:new FormControl(''),
-  Nposts:new FormControl(''),
-  ListAlbum:new FormControl('')
-});
+
 
 
 
